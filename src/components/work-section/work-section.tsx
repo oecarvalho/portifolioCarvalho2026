@@ -60,6 +60,7 @@ export const WorkSection = () => {
 
                     </div>
                 </div>
+
             </div>
         </section>
     )
