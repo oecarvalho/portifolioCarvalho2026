@@ -6,11 +6,11 @@ export const HeroSection = () => {
     <section className="w-full overflow-x-hidden">
       
       <div className="container mx-auto px-6">
-        <div className="w-full max-w-[1140px] mx-auto mt-20 lg:mt-36 text-center">
+        <div className="w-full max-w-285 mx-auto mt-20 lg:mt-36 text-center">
           <h1 className="font-mono font-bold text-[42px] md:text-[64px] lg:text-[84px] leading-[1.1] lg:leading-23">
             Interfaces de alto impacto construídas com estratégia, performance e precisão.
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mt-8 lg:mt-10 text-gray-400 max-w-3xl mx-auto">
+          <p className="text-2xl md:text-xl mt-8 lg:mt-10 text-gray-400 w-full max-w-3xl mx-auto">
             Desenvolvimento de interfaces modernas focadas em usabilidade,
             eficiência e entrega de valor ao produto.
           </p>
