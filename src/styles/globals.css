@@ -20,7 +20,7 @@ h1{
   font-family: var(--font-ubuntu-mono); /* Força no header */
 }
 
-p{
+p, span{
   font-family: var(--font-roboto-mono); /* Força no header */
 }
 
