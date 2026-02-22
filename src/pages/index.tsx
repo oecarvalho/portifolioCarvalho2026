@@ -1,3 +1,4 @@
+import { About } from "@/components/about-section/about-section";
 import { HeroSection } from "@/components/hero-section/hero-section";
 import { ProjectsSection } from "@/components/projects-section/projects-section";
 import { TechSwiper } from "@/components/techSwipper-section/techSwipper-section";
@@ -10,6 +11,7 @@ export default function Home() {
       <WorkSection/>
       <ProjectsSection/>
       <TechSwiper/>
+      <About/>
     </article>
   );
 }
