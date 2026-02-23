@@ -17,7 +17,6 @@ export default function Home() {
       <About/>
       <JourneySection/>
       <PublicationsSection/>
-      <Footer/>
     </article>
   );
 }
