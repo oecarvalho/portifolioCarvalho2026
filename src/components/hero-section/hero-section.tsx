@@ -37,7 +37,7 @@ export const HeroSection = () => {
               <i className="devicon-github-original text-3xl lg:text-4xl transition-all duration-300 hover:text-[#00D1FF] hover:scale-110 block"></i>
             </Link>
 
-            <Link href="https://linkedin.com/in/oecarvalho" target="_blank">
+            <Link href="https://linkedin.com/in/felipepcarvalho" target="_blank">
               <i className="devicon-linkedin-plain text-3xl lg:text-4xl transition-all duration-300 hover:text-[#00D1FF] hover:scale-110 block"></i>
             </Link>
 

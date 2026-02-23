@@ -15,7 +15,7 @@ export const JourneySection = () => {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 md:mb-11 gap-4">
                     <div className="flex items-center gap-2">
                         <CpuIcon size={25} weight="fill" className="text-[#00D1FF]" />
-                        <span className="text-[#00D1FF] font-bold text-lg md:text-xl uppercase tracking-wider">
+                        <span className="text-[#00D1FF] text-sm md:text-xl tracking-wider">
                             Jornada
                         </span>
                     </div>

@@ -24,6 +24,10 @@ p, span{
   font-family: var(--font-roboto-mono); /* Força no header */
 }
 
+footer a{
+  font-family: var(--font-ubuntu-mono); /* Força no header */
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
