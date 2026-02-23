@@ -24,7 +24,7 @@ export const TechSwiper = () => {
   ];
 
   return (
-    <div className="w-full py-20 overflow-hidden">
+    <div className="w-full py-10 overflow-hidden">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={10}
