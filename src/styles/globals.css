@@ -28,6 +28,10 @@ footer a{
   font-family: var(--font-ubuntu-mono); /* Força no header */
 }
 
+.text-wrapper {
+  position: relative;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
