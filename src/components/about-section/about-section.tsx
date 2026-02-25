@@ -63,10 +63,10 @@ export const About = () => {
                     {/* Botão: Centralizado no mobile, alinhado à esquerda no desktop */}
                     <Link 
                         href='/'  
-                        className="flex items-center justify-center w-full max-w-[225px] mt-8 md:mt-12 gap-3 py-3.5 px-7.5 bg-[#00D1FF] hover:bg-[#0088a7] transition-colors"
+                        className="group flex items-center justify-center w-full max-w-[225px] mt-8 md:mt-12 gap-3 py-3.5 px-7.5 bg-[#00D1FF] hover:bg-[#1a1a1a] transition-colors"
                     >
-                        <p className="font-sans text-xl text-white">Download CV</p>
-                        <DownloadSimpleIcon size={20} weight="bold" className="text-white"/>
+                        <p className="font-sans text-xl text-[#010101] group-hover:text-white">Download CV</p>
+                        <DownloadSimpleIcon size={20} weight="bold" className=" text-[#010101] group-hover:text-white"/>
                     </Link>
                 </div>
             </div>

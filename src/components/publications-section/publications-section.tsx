@@ -1,4 +1,4 @@
-import { CpuIcon } from "@phosphor-icons/react"
+import { NewspaperIcon, ScrollIcon } from "@phosphor-icons/react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -12,7 +12,7 @@ export const PublicationsSection = () => {
             {/* Header: Mantive as fontes e cores. Ajuste apenas no alinhamento mobile */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 md:mb-11 gap-4">
                 <div className="flex items-center gap-2">
-                    <CpuIcon size={25} weight="fill" className="text-[#00D1FF]" />
+                    <ScrollIcon size={25} weight="fill" className="text-[#00D1FF]" />
                     <span className="text-[#00D1FF] text-sm md:text-xl tracking-wider">
                         Publicações
                     </span>
@@ -76,16 +76,16 @@ export const PublicationsSection = () => {
                     <div className="flex flex-wrap items-center gap-4">
                         <Link
                             href='/'
-                            className="flex items-center justify-center w-full sm:max-w-[180px] gap-3 py-3.5 px-7.5 bg-[#00D1FF] hover:bg-[#0088a7] transition-colors"
+                            className="group flex items-center justify-center w-full sm:max-w-[180px] gap-3 py-3.5 px-7.5 bg-[#00D1FF] hover:bg-[#1a1a1a] transition-colors"
                         >
-                            <p className="font-sans text-xl text-white">Leia Mais</p>
+                            <p className="font-sans text-xl text-[#010101] group-hover:text-white">Leia Mais</p>
                         </Link>
 
                         <Link
                             href='/'
-                            className="group flex items-center justify-center w-full sm:max-w-[180px] gap-3 py-3.5 px-7.5 bg-transparent border border-[#00D1FF] hover:bg-[#00D1FF] transition-colors"
+                            className="group flex items-center justify-center w-full sm:max-w-[180px] gap-3 py-3.5 px-7.5 bg-transparent border border-[#00D1FF]  hover:bg-[#00D1FF] transition-colors"
                         >
-                            <p className="font-sans text-xl text-[#00D1FF] group-hover:text-white">Outras</p>
+                            <p className="font-sans text-xl text-[#00D1FF] group-hover:text-[#010101]">Outras</p>
                         </Link>
                     </div>
                 </div>

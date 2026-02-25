@@ -25,9 +25,9 @@ export const Footer = () => {
 
                         <Link
                             href='/'
-                            className="flex items-center justify-center w-full max-w-[300px] gap-3 py-3 px-7 bg-[#00D1FF] hover:bg-[#0088a7] transition-colors"
+                            className=" group flex items-center justify-center w-full max-w-[300px] gap-3 py-3 px-7 bg-[#00D1FF] hover:bg-[#1a1a1a] transition-colors"
                         >
-                            <p className="font-sans text-lg md:text-xl text-white">Começar Projeto</p>
+                            <p className="font-sans text-lg md:text-xl text-[#010101] group-hover:text-white">Começar Projeto</p>
                         </Link>
                     </div>
 
