@@ -1,4 +1,5 @@
 import { About } from "@/components/about-section/about-section";
+import { CtaFinal } from "@/components/cta-final/cta-final";
 import { Footer } from "@/components/footer/footer";
 import { HeroSection } from "@/components/hero-section/hero-section";
 import { JourneySection } from "@/components/journey-section/journey-section";
@@ -17,6 +18,7 @@ export default function Home() {
       <About/>
       <JourneySection/>
       <PublicationsSection/>
+      <CtaFinal/>
     </article>
   );
 }

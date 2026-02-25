@@ -2,7 +2,9 @@ import { CpuIcon } from "@phosphor-icons/react"
 import Image from "next/image"
 import Link from "next/link"
 
+
 export const PublicationsSection = () => {
+
     return (
         // mt-60 mantido para desktop, reduzido proporcionalmente no mobile
         <section className="container mx-auto mt-20 md:mt-40 lg:mt-60 px-4">
@@ -85,21 +87,6 @@ export const PublicationsSection = () => {
                         >
                             <p className="font-sans text-xl text-[#00D1FF] group-hover:text-white">Outras</p>
                         </Link>
-                    </div>
-                </div>
-            </div>
-
-            {/* Seção Final: mt-76 (aprox 304px) mantido para desktop, reduzido no mobile */}
-            <div className="mt-32 md:mt-52 lg:mt-76 pb-20">
-                <div className="flex flex-col justify-center w-full max-w-[90%] lg:max-w-[1200px] mx-auto">
-                    <div className="mb-10 lg:mb-20 font-mono leading-6 text-[#00D1FF] text-center lg:text-left">
-                        <p>Vamos construir algo que faça sentido!</p>
-                    </div>
-
-                    <div>
-                        <h1 className="font-mono text-2xl md:text-5xl lg:text-6xl lg:leading-[70px] text-center lg:text-left">
-                            Nem todo contato precisa começar formal. Às vezes, tudo começa com um bom papo e algumas xícaras de café.
-                        </h1>
                     </div>
                 </div>
             </div>
