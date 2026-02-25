@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 export const CtaFinal = () => {
     const textSectionRef = useRef<HTMLDivElement>(null)
     const headingRef = useRef<HTMLHeadingElement>(null)
+    const textRef = useRef<HTMLHeadingElement>(null)
+
 
     useEffect(() => {
         if (!textSectionRef.current || !headingRef.current) return
@@ -65,11 +67,60 @@ export const CtaFinal = () => {
 
         return () => ctx.revert()
     }, [])
+
+    useEffect(() => {
+  if (!textSectionRef.current || !textRef.current) return
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  const element = textRef.current
+  const originalText = element.textContent || ""
+
+  element.textContent = ""
+
+  const textSpan = document.createElement("span")
+  element.appendChild(textSpan)
+
+  const cursor = document.createElement("span")
+  cursor.textContent = "|"
+  cursor.style.marginLeft = "4px"
+  element.appendChild(cursor)
+
+  ScrollTrigger.create({
+    trigger: textSectionRef.current, // 👈 usa o container real
+    start: "top 80%",
+    once: true,
+    onEnter: () => {
+
+      // anima escrita
+      gsap.to({}, {
+        duration: originalText.length * 0.05,
+        ease: "none",
+        onUpdate: function () {
+          const progress = this.progress()
+          const currentLength = Math.floor(progress * originalText.length)
+          textSpan.textContent = originalText.slice(0, currentLength)
+        }
+      })
+
+      // cursor piscando
+      gsap.to(cursor, {
+        opacity: 0,
+        repeat: -1,
+        yoyo: true,
+        duration: 0.6,
+        ease: "power2.inOut"
+      })
+    }
+  })
+
+}, [])
+
     return (
         <section className="container mx-auto mt-32 relative overflow-x-hidden md:mt-52 lg:mt-76 pb-20">
             <div ref={textSectionRef} className="flex flex-col justify-center w-full max-w-[90%] lg:max-w-[1200px] mx-auto">
                 <div className="mb-10 lg:mb-20 font-mono leading-6 text-[#00D1FF] text-center lg:text-left">
-                    <p>Vamos construir algo que faça sentido!</p>
+                    <p ref={textRef}>Vamos construir algo que faça sentido!</p>
                 </div>
 
                 <div>

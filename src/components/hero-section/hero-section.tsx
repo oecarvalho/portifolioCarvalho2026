@@ -2,6 +2,7 @@ import "devicon"
 import Link from "next/link"
 
 export const HeroSection = () => {
+
   return (
     <section className="w-full overflow-x-hidden">
       

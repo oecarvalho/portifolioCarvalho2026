@@ -6,6 +6,8 @@ import { CodeSimpleIcon, CompassToolIcon, PenNibIcon } from "@phosphor-icons/rea
 export const WorkSection = () => {
   const sectionRef = useRef<HTMLElement>(null)
   const headingRef = useRef<HTMLHeadingElement>(null)
+  const text1Ref = useRef<HTMLParagraphElement>(null)
+  const text2Ref = useRef<HTMLParagraphElement>(null)
 
  
   useEffect(() => {
@@ -72,6 +74,61 @@ export const WorkSection = () => {
     return () => ctx.revert()
   }, [])
 
+
+  useEffect(() => {
+    if (!sectionRef.current) return
+
+    gsap.registerPlugin(ScrollTrigger)
+
+   const createTypewriter = (element: HTMLElement) => {
+  const originalHTML = element.innerHTML
+
+  element.innerHTML = ""
+
+  const textSpan = document.createElement("span")
+  const cursor = document.createElement("span")
+
+  cursor.textContent = "|"
+  cursor.style.marginLeft = "4px"
+  cursor.style.display = "inline-block"
+
+  element.appendChild(textSpan)
+  element.appendChild(cursor)
+
+  ScrollTrigger.create({
+    trigger: element,
+    start: "top 85%",
+    once: true,
+    onEnter: () => {
+
+      gsap.to({}, {
+        duration: originalHTML.length * 0.02,
+        ease: "none",
+        onUpdate: function () {
+          const progress = this.progress()
+          const currentLength = Math.floor(progress * originalHTML.length)
+
+          textSpan.innerHTML =
+            originalHTML.slice(0, currentLength)
+        }
+      })
+
+      gsap.to(cursor, {
+        opacity: 0,
+        repeat: -1,
+        yoyo: true,
+        duration: 0.6,
+        ease: "power2.inOut"
+      })
+    }
+  })
+}
+
+    if (text1Ref.current) createTypewriter(text1Ref.current)
+    if (text2Ref.current) createTypewriter(text2Ref.current)
+
+  }, [])
+
   return (
     <section
       ref={sectionRef}
@@ -83,7 +140,7 @@ export const WorkSection = () => {
 
           <div className="mb-10 lg:mb-20 font-mono leading-6 text-[#00D1FF] text-center lg:text-left">
             <p>Mais do que código</p>
-            <p>entrego experiências que conectam!</p>
+            <p  ref={text2Ref}>entrego experiências que conectam!</p>
           </div>
 
           <h1
