@@ -17,6 +17,7 @@ export const WorkSection = () => {
     const ctx = gsap.context(() => {
       const element = headingRef.current!
 
+      // ---------- SPLIT LIMPO ----------
       const textNodes: Text[] = []
       const walker = document.createTreeWalker(
         element,
@@ -48,24 +49,24 @@ export const WorkSection = () => {
 
       const spans = element.querySelectorAll("span")
 
+      // ---------- TIMELINE ----------
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
-          end: () => "+=" + sectionRef.current!.offsetHeight,
+          start: "top top", // ativa exatamente quando a section encosta no topo
+          end: "+=1200", // distância que o usuário precisa scrollar
           scrub: true,
-          pin: true,
+          pin: true, // pin da SECTION inteira
           pinSpacing: true,
           anticipatePin: 1,
-        }
+        },
       })
 
       tl.to(spans, {
         opacity: 1,
         stagger: 0.05,
-        ease: "none"
+        ease: "none",
       })
-
     }, sectionRef)
 
     return () => ctx.revert()
@@ -78,7 +79,6 @@ export const WorkSection = () => {
 
     const createTypewriter = (element: HTMLElement) => {
       const originalHTML = element.innerHTML
-
       element.innerHTML = ""
 
       const textSpan = document.createElement("span")
@@ -103,7 +103,7 @@ export const WorkSection = () => {
               const progress = this.progress()
               const currentLength = Math.floor(progress * originalHTML.length)
               textSpan.innerHTML = originalHTML.slice(0, currentLength)
-            }
+            },
           })
 
           gsap.to(cursor, {
@@ -111,82 +111,92 @@ export const WorkSection = () => {
             repeat: -1,
             yoyo: true,
             duration: 0.6,
-            ease: "power2.inOut"
+            ease: "power2.inOut",
           })
-        }
+        },
       })
     }
 
     if (text1Ref.current) createTypewriter(text1Ref.current)
     if (text2Ref.current) createTypewriter(text2Ref.current)
-
   }, [])
 
   return (
     <section
       ref={sectionRef}
-      className="w-full relative overflow-x-hidden px-6"
+      className="w-full relative overflow-x-hidden"
     >
-      <div className="mx-auto mt-20 md:mt-28">
-
-        <div className="flex flex-col justify-center w-full max-w-6xl mx-auto">
-
-          <div className="mb-8 md:mb-10 lg:mb-20 font-mono leading-6 text-[#00D1FF] text-center lg:text-left">
+      <div className="mx-auto mt-28">
+        <div className="flex flex-col justify-center w-full max-w-[90%] lg:max-w-300 mx-auto">
+          <div className="mb-10 lg:mb-20 font-mono leading-6 text-[#00D1FF] text-center lg:text-left">
             <p>Mais do que código</p>
             <p ref={text2Ref}>entrego experiências que conectam!</p>
           </div>
 
           <h1
             ref={headingRef}
-            className="font-mono 
-                       text-2xl sm:text-3xl md:text-5xl lg:text-6xl
-                       leading-tight 
-                       text-center lg:text-left"
+            className="font-mono text-3xl md:text-5xl lg:text-6xl leading-tight lg:leading-17.5 text-center lg:text-left"
           >
-            Meu objetivo é traduzir as necessidades do seu negócio para a era digital com precisão,
-            design de impacto e interações fluidas. Se você acredita que o seu projeto merece o
-            melhor da tecnologia e do visual, estamos na mesma página. Vamos tirar essa ideia do papel?
+            Meu objetivo é traduzir as necessidades do seu negócio para a era digital com precisão, design de impacto e interações fluidas. Se você acredita que o seu projeto merece o melhor da tecnologia e do visual, estamos na mesma página. Vamos tirar essa ideia do papel?
           </h1>
-
         </div>
 
-        <div className="mt-20 md:mt-32 lg:mt-60 w-full mx-auto border-y border-[#2A2A2B]">
-
+        <div className="mt-32 lg:mt-60 w-full mx-auto border-y border-[#2A2A2B]">
           <div className="flex container mx-auto flex-col lg:flex-row items-stretch justify-between">
 
-            <div className="group w-full flex flex-col items-center gap-8 md:gap-10 pt-10 pb-14 border-b lg:border-b-0 lg:border-l border-[#2A2A2B] transition-all duration-300 hover:bg-[#00D1FF]">
+            <div className="group w-full flex flex-col items-center gap-10 pt-10 pb-14 border-b lg:border-b-0 lg:border-l border-[#2A2A2B] transition-all duration-300 hover:bg-[#00D1FF]">
               <div className="flex flex-col items-center">
-                <CompassToolIcon size={32} weight="fill" className="text-[#00D1FF] transition-colors duration-300 group-hover:text-[#010101]" />
-                <p className="font-mono text-[#00D1FF] uppercase font-bold text-xl transition-colors duration-300 group-hover:text-[#010101]">UX</p>
+                <CompassToolIcon
+                  size={32}
+                  weight="fill"
+                  className="text-[#00D1FF] transition-colors duration-300 group-hover:text-[#010101]"
+                />
+                <p className="font-mono text-[#00D1FF] uppercase font-bold text-xl transition-colors duration-300 group-hover:text-[#010101]">
+                  UX
+                </p>
               </div>
-              <p className="font-sans w-full max-w-[90%] md:max-w-[80%] lg:max-w-[450px] text-center transition-colors duration-300 group-hover:text-[#010101] text-gray-400">
+
+              <p className="font-sans w-full max-w-[80%] lg:max-w-112.5 text-center transition-colors duration-300 group-hover:text-[#010101] text-gray-400">
                 Utilizo o design thinking para resolver problemas, aprimorando a experiência do usuário (UX) por meio do processo Double Diamond.
               </p>
             </div>
 
-            <div className="group w-full flex flex-col items-center gap-8 md:gap-10 pt-10 pb-14 border-b lg:border-b-0 lg:border-x border-[#2A2A2B] transition-all duration-300 hover:bg-[#00D1FF]">
+            <div className="group w-full flex flex-col items-center gap-10 pt-10 pb-14 border-b lg:border-b-0 lg:border-x border-[#2A2A2B] transition-all duration-300 hover:bg-[#00D1FF]">
               <div className="flex flex-col items-center">
-                <PenNibIcon size={32} weight="fill" className="text-[#00D1FF] transition-colors duration-300 group-hover:text-[#010101]" />
-                <p className="font-mono text-[#00D1FF] uppercase font-bold text-xl transition-colors duration-300 group-hover:text-[#010101]">Design</p>
+                <PenNibIcon
+                  size={32}
+                  weight="fill"
+                  className="text-[#00D1FF] transition-colors duration-300 group-hover:text-[#010101]"
+                />
+                <p className="font-mono text-[#00D1FF] uppercase font-bold text-xl transition-colors duration-300 group-hover:text-[#010101]">
+                  Design
+                </p>
               </div>
-              <p className="font-sans w-full max-w-[90%] md:max-w-[80%] lg:max-w-[450px] text-center transition-colors duration-300 group-hover:text-[#010101] text-gray-400">
+
+              <p className="font-sans w-full max-w-[80%] lg:max-w-112.5 text-center transition-colors duration-300 group-hover:text-[#010101] text-gray-400">
                 Utilizando processos de design, realizo a construção de moodboards, wireframes e style guide para desenvolver o protótipo de alta fidelidade.
               </p>
             </div>
 
-            <div className="group w-full flex flex-col items-center gap-8 md:gap-10 pt-10 pb-14 lg:border-r border-[#2A2A2B] transition-all duration-300 hover:bg-[#00D1FF]">
+            <div className="group w-full flex flex-col items-center gap-10 pt-10 pb-14 lg:border-r border-[#2A2A2B] transition-all duration-300 hover:bg-[#00D1FF]">
               <div className="flex flex-col items-center">
-                <CodeSimpleIcon size={32} weight="bold" className="text-[#00D1FF] transition-colors duration-300 group-hover:text-[#010101]" />
-                <p className="font-mono text-[#00D1FF] uppercase font-bold text-xl transition-colors duration-300 group-hover:text-[#010101]">Code</p>
+                <CodeSimpleIcon
+                  size={32}
+                  weight="bold"
+                  className="text-[#00D1FF] transition-colors duration-300 group-hover:text-[#010101]"
+                />
+                <p className="font-mono text-[#00D1FF] uppercase font-bold text-xl transition-colors duration-300 group-hover:text-[#010101]">
+                  Code
+                </p>
               </div>
-              <p className="font-sans w-full max-w-[90%] md:max-w-[80%] lg:max-w-[450px] text-center transition-colors duration-300 group-hover:text-[#010101] text-gray-400">
+
+              <p className="font-sans w-full max-w-[80%] lg:max-w-112.5 text-center transition-colors duration-300 group-hover:text-[#010101] text-gray-400">
                 Conforme as necessidades específicas de cada projeto idealizado, faço uso das melhores tecnologias do mercado para a implementação da solução.
               </p>
             </div>
 
           </div>
         </div>
-
       </div>
     </section>
   )
