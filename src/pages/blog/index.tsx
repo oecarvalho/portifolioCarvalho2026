@@ -47,8 +47,9 @@ const Blog = () => {
                 </p>
 
             </div>
+
             <div className="w-full 
-                      mt-10 md:mt-20 lg:mt-24 xl:mt-32 2xl:mt-44 
+                      md:mt-10 lg:mt-14 xl:mt-22 2xl:mt-34 
                       border-y border-[#2A2A2B]">
 
                 <div className="container mx-auto 
@@ -100,6 +101,155 @@ const Blog = () => {
                     </div>
 
                 </div>
+            </div>
+
+
+            <div className="grid grid-cols-3 items-center justify-between mt-10 gap-16">
+                <div className="flex flex-col w-full max-w-117">
+                    <Image
+                        src='/blog-post.png'
+                        width={1456}
+                        height={620}
+                        alt='imagem mockup do projeto'
+                        className="w-full object-cover border border-[#2a2a2b]"
+                    />
+
+                    <div className="flex flex-col mt-3.5">
+                        <div className="flex items-center gap-4">
+                            <p className="font-mono text-[#00D1FF] text-sm">Insights</p>
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#38ff38]"></div>
+                            <p className="text-sm">5 de Janeiro</p>
+                        </div>
+
+                        <h1 className="uppercase text-2xl">O futuro da IA na programação VR</h1>
+                    </div>
+
+                    <p className="text-regular text-[#939393] mt-3.5">
+                        Explorando conceitos de programação e inteligencia artificial na construção de aplicações VR.
+                    </p>
+                </div>
+
+                <div className="flex flex-col w-full max-w-117">
+                    <Image
+                        src='/blog-post.png'
+                        width={1456}
+                        height={620}
+                        alt='imagem mockup do projeto'
+                        className="w-full object-cover border border-[#2a2a2b]"
+                    />
+
+                    <div className="flex flex-col mt-3.5">
+                        <div className="flex items-center gap-4">
+                            <p className="font-mono text-[#00D1FF] text-sm">Insights</p>
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#38ff38]"></div>
+                            <p className="text-sm">5 de Janeiro</p>
+                        </div>
+
+                        <h1 className="uppercase text-2xl">O futuro da IA na programação VR</h1>
+                    </div>
+
+                    <p className="text-regular text-[#939393] mt-3.5">
+                        Explorando conceitos de programação e inteligencia artificial na construção de aplicações VR.
+                    </p>
+                </div>
+
+                <div className="flex flex-col w-full max-w-117">
+                    <Image
+                        src='/blog-post.png'
+                        width={1456}
+                        height={620}
+                        alt='imagem mockup do projeto'
+                        className="w-full object-cover border border-[#2a2a2b]"
+                    />
+
+                    <div className="flex flex-col mt-3.5">
+                        <div className="flex items-center gap-4">
+                            <p className="font-mono text-[#00D1FF] text-sm">Insights</p>
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#38ff38]"></div>
+                            <p className="text-sm">5 de Janeiro</p>
+                        </div>
+
+                        <h1 className="uppercase text-2xl">O futuro da IA na programação VR</h1>
+                    </div>
+
+                    <p className="text-regular text-[#939393] mt-3.5">
+                        Explorando conceitos de programação e inteligencia artificial na construção de aplicações VR.
+                    </p>
+                </div>
+
+                                <div className="flex flex-col w-full max-w-117">
+                    <Image
+                        src='/blog-post.png'
+                        width={1456}
+                        height={620}
+                        alt='imagem mockup do projeto'
+                        className="w-full object-cover border border-[#2a2a2b]"
+                    />
+
+                    <div className="flex flex-col mt-3.5">
+                        <div className="flex items-center gap-4">
+                            <p className="font-mono text-[#00D1FF] text-sm">Insights</p>
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#38ff38]"></div>
+                            <p className="text-sm">5 de Janeiro</p>
+                        </div>
+
+                        <h1 className="uppercase text-2xl">O futuro da IA na programação VR</h1>
+                    </div>
+
+                    <p className="text-regular text-[#939393] mt-3.5">
+                        Explorando conceitos de programação e inteligencia artificial na construção de aplicações VR.
+                    </p>
+                </div>
+
+                <div className="flex flex-col w-full max-w-117">
+                    <Image
+                        src='/blog-post.png'
+                        width={1456}
+                        height={620}
+                        alt='imagem mockup do projeto'
+                        className="w-full object-cover border border-[#2a2a2b]"
+                    />
+
+                    <div className="flex flex-col mt-3.5">
+                        <div className="flex items-center gap-4">
+                            <p className="font-mono text-[#00D1FF] text-sm">Insights</p>
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#38ff38]"></div>
+                            <p className="text-sm">5 de Janeiro</p>
+                        </div>
+
+                        <h1 className="uppercase text-2xl">O futuro da IA na programação VR</h1>
+                    </div>
+
+                    <p className="text-regular text-[#939393] mt-3.5">
+                        Explorando conceitos de programação e inteligencia artificial na construção de aplicações VR.
+                    </p>
+                </div>
+
+                <div className="flex flex-col w-full max-w-117">
+                    <Image
+                        src='/blog-post.png'
+                        width={1456}
+                        height={620}
+                        alt='imagem mockup do projeto'
+                        className="w-full object-cover border border-[#2a2a2b]"
+                    />
+
+                    <div className="flex flex-col mt-3.5">
+                        <div className="flex items-center gap-4">
+                            <p className="font-mono text-[#00D1FF] text-sm">Insights</p>
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#38ff38]"></div>
+                            <p className="text-sm">5 de Janeiro</p>
+                        </div>
+
+                        <h1 className="uppercase text-2xl">O futuro da IA na programação VR</h1>
+                    </div>
+
+                    <p className="text-regular text-[#939393] mt-3.5">
+                        Explorando conceitos de programação e inteligencia artificial na construção de aplicações VR.
+                    </p>
+                </div>
+
+
             </div>
         </section>
     )
