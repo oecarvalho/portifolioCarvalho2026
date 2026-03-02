@@ -75,7 +75,7 @@ export const Footer = () => {
                             <Link className="text-xs md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='/'>
                                 Home
                             </Link>
-                            <Link className="text-xs md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='#projetos'>
+                            <Link className="text-xs md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='#projects'>
                                 Projetos
                             </Link>
                             <Link className="text-xs md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='/blog'>

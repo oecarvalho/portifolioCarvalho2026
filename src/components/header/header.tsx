@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export const Header = () => {
     return (
-        <header className="container mx-auto px-6 py-8 md:py-10">
+        <header className="container mx-auto py-8 md:py-10">
             {/* Mobile: Itens empilhados e centralizados para um visual clean.
                 Desktop: Itens nas extremidades (justify-between).
             */}
@@ -20,7 +20,7 @@ export const Header = () => {
                     <Link className="text-sm md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='/'>
                         Home
                     </Link>
-                    <Link className="text-sm md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='#projetos'>
+                    <Link className="text-sm md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='#projects'>
                         Projetos
                     </Link>
                     <Link className="text-sm md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='/blog'>

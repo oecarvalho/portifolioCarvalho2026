@@ -29,7 +29,7 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      {/* FOOTER STRIP */}
+      
       <div className="w-full 
                       mt-16 md:mt-20 lg:mt-24 xl:mt-32 2xl:mt-44 
                       border-y border-[#2A2A2B]">

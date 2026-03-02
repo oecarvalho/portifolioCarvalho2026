@@ -29,9 +29,9 @@ const PROJECTS_DATA = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="container mx-auto my-24 md:my-40 lg:my-60 px-6">
+    <section id="projects" className="container mx-auto my-24 md:my-40 lg:my-60 px-6">
 
-      {/* Header da Seção */}
+      
       <div className="flex flex-col md:flex-row 
                       justify-between items-start md:items-center 
                       mb-10 md:mb-11 gap-6">
