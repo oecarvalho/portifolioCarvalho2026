@@ -4,7 +4,7 @@ import { TechSwiper } from "../techSwipper-section/techSwipper-section"
 
 export const Footer = () => {
     return (
-        <footer className="w-full mt-24 md:mt-90">
+        <footer id="contact" className="w-full mt-24 md:mt-90">
             {/* CONTAINER DAS BORDAS INFINITAS */}
             <div className="flex border-y border-[#2a2a2b]">
                 {/* Ajustado para flex-col no mobile e flex-row no desktop */}
@@ -24,7 +24,7 @@ export const Footer = () => {
                         </div>
 
                         <Link
-                            href='/'
+                            href='https://wa.me/5511980798027' target="_blank"
                             className=" group flex items-center justify-center w-full max-w-[300px] gap-3 py-3 px-7 bg-[#00D1FF] hover:bg-[#1a1a1a] transition-colors"
                         >
                             <p className="font-sans text-lg md:text-xl text-[#010101] group-hover:text-white">Começar Projeto</p>
@@ -81,7 +81,7 @@ export const Footer = () => {
                             <Link className="text-xs md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='/books'>
                                 Livros
                             </Link>
-                            <Link className="text-xs md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='#contato'>
+                            <Link className="text-xs md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='#contact'>
                                 Contato
                             </Link>
                         </nav>

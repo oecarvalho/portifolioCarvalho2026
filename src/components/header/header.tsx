@@ -26,7 +26,7 @@ export const Header = () => {
                     <Link className="text-sm md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='/books'>
                         Livros
                     </Link>
-                    <Link className="text-sm md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='#contato'>
+                    <Link className="text-sm md:text-base relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#00D1FF] after:transition-all hover:after:w-full" href='#contact'>
                         Contato
                     </Link>
                 </nav>

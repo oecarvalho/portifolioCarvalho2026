@@ -59,7 +59,7 @@ export const ProjectsSection = () => {
                       justify-items-center">
 
         {PROJECTS_DATA.map((project) => (
-          <Link href="/" key={project.id} className="w-full max-w-sm md:max-w-md lg:max-w-none">
+          <Link href="/projects" key={project.id} className="w-full max-w-sm md:max-w-md lg:max-w-none">
             <div className="group relative 
                             border border-[#2a2a2b] 
                             bg-black 
