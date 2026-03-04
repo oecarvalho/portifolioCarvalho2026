@@ -1,10 +1,14 @@
 import Image from "next/image"
 import Link from "next/link"
+import { PostCard } from "./components/post-card"
+import { allPosts } from "contentlayer/generated"
+
+const posts = allPosts;
 
 const Blog = () => {
     return (
         <section className="container mx-auto px-4 md:px-6 lg:px-8">
-            {/* HEADER SECTION */}
+
             <div className="flex flex-col mt-10 md:mt-16 lg:flex-row 
                             justify-between items-start lg:items-center 
                             mb-10 md:mb-11 gap-6">
@@ -22,7 +26,7 @@ const Blog = () => {
                 </p>
             </div>
 
-            {/* FEATURED IMAGE */}
+
             <div className="relative w-full overflow-hidden">
                 <Image
                     src='/project-section.png'
@@ -33,7 +37,7 @@ const Blog = () => {
                 />
             </div>
 
-            {/* FEATURED POST TEXT */}
+
             <div className="flex flex-col gap-4 mt-8 md:mt-14">
                 <div className="flex items-center gap-4">
                     <p className="font-mono text-[#00D1FF] text-sm">Insights</p>
@@ -51,10 +55,10 @@ const Blog = () => {
                 </p>
             </div>
 
-            {/* AUTHOR BAR */}
+
             <div className="w-full mt-12 lg:mt-20 border-y border-[#2A2A2B]">
                 <div className="flex flex-col md:flex-row justify-between items-center">
-                    
+
                     <div className="flex flex-1 items-center justify-center md:justify-start py-6 lg:py-10">
                         <p className="font-mono tracking-[0.2em] text-xs lg:text-sm uppercase">
                             Felipe Carvalho
@@ -85,42 +89,20 @@ const Blog = () => {
                 </div>
             </div>
 
-            {/* POSTS GRID */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16 mt-16 mb-20">
-                {/* Reutilize este bloco para cada post */}
-                {[1, 2, 3, 4, 5, 6].map((post) => (
-                    <div key={post} className="flex flex-col group">
-                        <div className="overflow-hidden border border-[#2a2a2b]">
-                            <Image
-                                src='/blog-post.png'
-                                width={500}
-                                height={300}
-                                alt='imagem mockup do projeto'
-                                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                            />
-                        </div>
-
-                        <div className="flex flex-col mt-5">
-                            <div className="flex items-center gap-3 mb-2">
-                                <p className="font-mono text-[#00D1FF] text-xs uppercase">Insights</p>
-                                <div className="w-1 h-1 rounded-full bg-[#38ff38]"></div>
-                                <p className="text-xs text-gray-500">5 de Janeiro</p>
-                            </div>
-
-                            <Link href='/blog/publications'>
-                                <h2 className="uppercase text-xl font-bold leading-snug group-hover:text-[#00D1FF] transition-colors">
-                                    O futuro da IA na programação VR
-                                </h2>
-                            </Link>
-
-                            <p className="text-sm text-[#939393] mt-3 line-clamp-3">
-                                Explorando conceitos de programação e inteligência artificial na construção de aplicações VR.
-                            </p>
-                        </div>
-                    </div>
+                {posts.map((post)=>(
+                    <PostCard 
+                        key={post._id}
+                        title={post.title}
+                        description={post.description}
+                        date={new Date(post.date).toLocaleDateString('pt-BR')}
+                        slug={post.slug}
+                        image={post.image}
+                    />
                 ))}
             </div>
-        </section>
+
+        </section >
     )
 }
 
