@@ -1,7 +1,7 @@
 ---
 title: Ideias para a construção de interfaces com IA
 description: Otimize o seu tempo e aprenda agora as minhas técnicas de prompting para a construção de interfaces bonitas, intuitivas e cheias de experiências.
-image: /assets/blog-post.png
+image: /assets/teste.jpg
 date: 2026-01-10 10:20:00
 ---
 

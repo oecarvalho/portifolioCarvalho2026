@@ -41,7 +41,9 @@ const BlogPost = () => {
                     src={post?.image ?? ''}
                     width={1456}
                     height={620}
+                    quality={100}
                     alt='imagem mockup do projeto'
+                    priority
                     className="w-full h-[250px] sm:h-[450px] lg:h-[620px] object-cover border border-[#2a2a2b]"
                 />
             </div>
@@ -51,7 +53,7 @@ const BlogPost = () => {
                 <div className="flex items-center gap-4">
                     <p className="font-mono text-[#00D1FF] text-sm font-semibold tracking-tight">Insights</p>
                     <div className="w-1.5 h-1.5 rounded-full bg-[#38ff38] animate-pulse"></div>
-                    <p className="text-sm text-gray-400">{new Date(post.date).toLocaleDateString('pt-BR')}</p>
+                    <p className="text-sm text-gray-400">{new Date(post?.date || "").toLocaleDateString('pt-BR')}</p>
                 </div>
 
                 <h1 className="font-mono font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase leading-[1.1]">

@@ -14,9 +14,9 @@ const Blog = () => {
                             mb-10 md:mb-11 gap-6">
 
                 <div className="flex items-center gap-2">
-                    <span className="text-[#00D1FF] text-xl md:text-2xl tracking-wider ">
-                        Blog
-                    </span>
+                    <Link href='/blog' className="text-[#00D1FF] text-lg md:text-xl tracking-wider ">
+                       <p>Blog</p>
+                    </Link>
                 </div>
 
                 <p className="w-full lg:max-w-lg 
