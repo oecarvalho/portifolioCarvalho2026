@@ -15,6 +15,10 @@ export const Post = defineDocumentType(() => ({
       type: 'string', 
       resolve: (doc) => doc._raw.sourceFileName.replace('.md', '') 
     },
+    displayImage: {
+      type: 'string',
+      resolve: (post) => post.image.replace(/\r/g, '').trim(),
+    },
   },
 }))
 

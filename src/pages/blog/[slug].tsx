@@ -1,3 +1,4 @@
+import { Markdown } from "@/components/markdown/markdown";
 import { allPosts } from "contentlayer/generated";
 import Image from "next/image"
 import Link from "next/link"
@@ -65,11 +66,7 @@ const BlogPost = () => {
             {/* MAIN CONTENT AREA */}
             <div className="w-full max-w-4xl mt-10">
                 <div className="prose prose-invert prose-blue max-w-none">
-                    <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
-                        A construção de interfaces com IA exige uma mudança de mentalidade: não se trata apenas de desenhar telas bonitas, mas de projetar sistemas que aprendem, se adaptam e respondem ao contexto do usuário. Diferente de interfaces tradicionais, onde cada ação é previsível, experiências com inteligência artificial incorporam incerteza — e isso precisa ser refletido no design.
-                    </p>
-
-
+                    <Markdown content={post?.body.raw || ""}/>
                 </div>
             </div>
 
