@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { PostCard } from "./components/post-card"
+import { PostCard } from "../../features/blog/components/post-card"
 import { allPosts } from "contentlayer/generated"
 
 const posts = allPosts;
